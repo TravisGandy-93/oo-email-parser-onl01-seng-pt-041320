@@ -6,10 +6,11 @@ class EmailAddressParser
   attr_accessor :email
   
   def initialize(emails)
-    @emails = emails 
+    @email = emails 
   end
   
   def parse 
-      @emails.split
+      @email.split(/[\s,]+/).uniq
+  end 
   
 end 
